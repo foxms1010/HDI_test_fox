@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" id="TCS_DIM_CITY_ID" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TCS_DIM_CITY_ID"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::TCS_CITY">
+    <resourceUri>com.sap::TCS_CITY</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<inlineHierarchy xsi:type="Dimension:LeveledHierarchy" id="GeoHierarchy" aggregateAllNodes="false" orphanedNodesHandling="ROOT_NODES" rootNodeVisibility="ADD_ROOT_NODE" withRootNode="true" nodeStyle="NAME_PATH_ENFORCED" cacheEnabled="true" cycleHandling="BREAKUP" emptyValueIsNull="true">
+  <descriptions defaultDescription="Geo Hierarchy"/>
+  <unassignedMemberProperties mode="FALSE"/>
+  <levels>
+    <level levelAttribute="Region" levelType="MDLEVEL_TYPE_REGULAR" order="1" orderAttribute="Region" sortDirection="ASC"/>
+    <level levelAttribute="Country" levelType="MDLEVEL_TYPE_REGULAR" order="2" orderAttribute="Country" sortDirection="ASC"/>
+    <level levelAttribute="City" levelType="MDLEVEL_TYPE_REGULAR" order="3" orderAttribute="City" sortDirection="ASC"/>
+  </levels>
+</inlineHierarchy>
+
+<logicalModel id="com.sap::TCS_CITY">
+  <attributes>
+    <attribute id="City_ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="City_ID"/>
+      <keyMapping columnObjectName="TCS_CITY" columnName="City ID"/>
+    </attribute>
+    <attribute id="City" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="City"/>
+      <keyMapping columnObjectName="TCS_CITY" columnName="City"/>
+    </attribute>
+    <attribute id="ISO_2" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ISO_2"/>
+      <keyMapping columnObjectName="TCS_CITY" columnName="ISO 2"/>
+    </attribute>
+    <attribute id="Country" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Country"/>
+      <keyMapping columnObjectName="TCS_CITY" columnName="Country"/>
+    </attribute>
+    <attribute id="Region" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Region"/>
+      <keyMapping columnObjectName="TCS_CITY" columnName="Region"/>
+    </attribute>
+    <attribute id="Latitude" order="6" displayAttribute="false" attributeHierarchyActive="false" semanticType="geoLocation.latitude">
+      <descriptions defaultDescription="Latitude"/>
+      <keyMapping columnObjectName="TCS_CITY" columnName="Latitude"/>
+    </attribute>
+    <attribute id="Longitude" order="7" displayAttribute="false" attributeHierarchyActive="false" semanticType="geoLocation.longitude">
+      <descriptions defaultDescription="Longitude"/>
+      <keyMapping columnObjectName="TCS_CITY" columnName="Longitude"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

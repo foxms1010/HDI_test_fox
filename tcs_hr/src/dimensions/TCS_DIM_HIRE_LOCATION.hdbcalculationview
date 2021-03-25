@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="TCS_DIM_HIRE_LOCATION" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TCS_DIM_HIRE_LOCATION"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::TCS_HIRE_LOCATION">
+    <resourceUri>com.sap::TCS_HIRE_LOCATION</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+
+<logicalModel id="com.sap::TCS_HIRE_LOCATION">
+  <attributes>
+    <attribute id="HireLocID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Hire Location ID"/>
+      <keyMapping columnObjectName="TCS_HIRE_LOCATION" columnName="ID"/>
+    </attribute>
+    <attribute id="HireLocDescription" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Hire Location Description"/>
+      <keyMapping columnObjectName="TCS_HIRE_LOCATION" columnName="Description"/>
+    </attribute>
+    <attribute id="HireLocRegion" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Hire Location Region"/>
+      <keyMapping columnObjectName="TCS_HIRE_LOCATION" columnName="Region"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

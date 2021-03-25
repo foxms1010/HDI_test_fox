@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="TCS_DIM_EMPLOYEE" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TCS_DIM_EMPLOYEE"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::TCS_EMPLOYEE">
+    <resourceUri>com.sap::TCS_EMPLOYEE</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+
+<logicalModel id="com.sap::TCS_EMPLOYEE">
+  <attributes>
+    <attribute id="EmployeeID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Employee ID"/>
+      <keyMapping columnObjectName="TCS_EMPLOYEE" columnName="ID"/>
+    </attribute>
+    <attribute id="EmployeeDescription" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Employee Description"/>
+      <keyMapping columnObjectName="TCS_EMPLOYEE" columnName="Description"/>
+    </attribute>
+    <attribute id="First_Name" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="First_Name"/>
+      <keyMapping columnObjectName="TCS_EMPLOYEE" columnName="First Name"/>
+    </attribute>
+    <attribute id="Last_Name" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Last_Name"/>
+      <keyMapping columnObjectName="TCS_EMPLOYEE" columnName="Last Name"/>
+    </attribute>
+    <attribute id="Email" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Email"/>
+      <keyMapping columnObjectName="TCS_EMPLOYEE" columnName="Email"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

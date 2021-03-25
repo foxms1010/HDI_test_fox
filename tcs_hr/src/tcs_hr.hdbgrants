@@ -1,0 +1,21 @@
+{
+	"perf_sandbox_svc": {
+	"object_owner": {
+
+	"schema_privileges":[
+         {  
+          "reference":"TCS_TECHNOLOGIES_HR",
+          "privileges_with_grant_option":["SELECT"]
+        }
+        ]
+	},
+	"application_user": {
+		"schema_privileges":[
+         {  
+          "reference":"TCS_TECHNOLOGIES_HR",
+          "privileges_with_grant_option":["SELECT"]
+        }
+        ]
+	}
+	}
+}

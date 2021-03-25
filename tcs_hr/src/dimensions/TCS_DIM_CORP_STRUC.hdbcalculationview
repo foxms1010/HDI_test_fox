@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" id="TCS_DIM_CORP_STRUC" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TCS_DIM_CORP_STRUC"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::TCS_CORP_STRUC">
+    <resourceUri>com.sap::TCS_CORP_STRUC</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<inlineHierarchy xsi:type="Dimension:LeveledHierarchy" id="CorpHierarchy" aggregateAllNodes="false" orphanedNodesHandling="ROOT_NODES" rootNodeVisibility="ADD_ROOT_NODE" withRootNode="true" nodeStyle="NAME_PATH_ENFORCED" cacheEnabled="true" cycleHandling="BREAKUP" emptyValueIsNull="true">
+  <descriptions defaultDescription="Corp Hierarchy"/>
+  <unassignedMemberProperties mode="FALSE"/>
+  <levels>
+    <level levelAttribute="CorpStrucLevel_1" levelType="MDLEVEL_TYPE_REGULAR" order="1" orderAttribute="CorpStrucLevel_1" sortDirection="ASC"/>
+    <level levelAttribute="CorpStrucLevel_2" levelType="MDLEVEL_TYPE_REGULAR" order="2" orderAttribute="CorpStrucLevel_2" sortDirection="ASC"/>
+    <level levelAttribute="CorpStrucLevel_3" levelType="MDLEVEL_TYPE_REGULAR" order="3" orderAttribute="CorpStrucLevel_3" sortDirection="ASC"/>
+    <level levelAttribute="CorpStrucLevel_4" levelType="MDLEVEL_TYPE_REGULAR" order="4" orderAttribute="CorpStrucLevel_4" sortDirection="ASC"/>
+    <level levelAttribute="CorpStrucDescription" levelType="MDLEVEL_TYPE_REGULAR" order="5" orderAttribute="CorpStrucDescription" sortDirection="ASC"/>
+  </levels>
+</inlineHierarchy>
+
+<logicalModel id="com.sap::TCS_CORP_STRUC">
+  <attributes>
+    <attribute id="CorpStrucID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Corp Hierarchy ID"/>
+      <keyMapping columnObjectName="TCS_CORP_STRUC" columnName="ID"/>
+    </attribute>
+    <attribute id="CorpStrucDescription" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Corp Hierarchy Description"/>
+      <keyMapping columnObjectName="TCS_CORP_STRUC" columnName="Description"/>
+    </attribute>
+    <attribute id="CorpStrucLevel_1" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Corp Hierarchy Level_1"/>
+      <keyMapping columnObjectName="TCS_CORP_STRUC" columnName="Level 1"/>
+    </attribute>
+    <attribute id="CorpStrucLevel_2" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Corp Hierarchy Level_2"/>
+      <keyMapping columnObjectName="TCS_CORP_STRUC" columnName="Level 2"/>
+    </attribute>
+    <attribute id="CorpStrucLevel_3" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Corp Hierarchy Level_3"/>
+      <keyMapping columnObjectName="TCS_CORP_STRUC" columnName="Level 3"/>
+    </attribute>
+    <attribute id="CorpStrucLevel_4" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Corp Hierarchy Level_4"/>
+      <keyMapping columnObjectName="TCS_CORP_STRUC" columnName="Level 4"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

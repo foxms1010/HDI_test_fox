@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="TCS_CUBE_HR_DATA" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" cacheInvalidationPeriod="NONE" enforceSqlExecution="false" hierarchiesSQLEnabled="true">
+<descriptions defaultDescription="TCS_CUBE_HR_DATA"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::TCS_TECHNOLOGIES_HR_DATA">
+    <resourceUri>com.sap::TCS_TECHNOLOGIES_HR_DATA</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:AggregationView" id="agg_TCS_HR_FACT">
+    <viewAttributes>
+      <viewAttribute id="Employee_ID"/>
+      <viewAttribute id="Age"/>
+      <viewAttribute id="Attrition"/>
+      <viewAttribute id="Headcount"/>
+      <viewAttribute id="Salary" aggregationType="sum"/>
+      <viewAttribute id="Time_with_Company_(Days)"/>
+      <viewAttribute id="Employment_Status"/>
+      <viewAttribute id="Gender"/>
+      <viewAttribute id="Career_Level"/>
+      <viewAttribute id="Employment_Type"/>
+      <viewAttribute id="Managerial_Employee"/>
+      <viewAttribute id="Country"/>
+      <viewAttribute id="Veteran_Status_(US)"/>
+      <viewAttribute id="Marital_Status"/>
+      <viewAttribute id="Minority_Grouping_(US)"/>
+      <viewAttribute id="Cost_Center"/>
+      <viewAttribute id="Degree"/>
+      <viewAttribute id="Instituion"/>
+      <viewAttribute id="Corporate_Structure"/>
+      <viewAttribute id="Job_Family"/>
+      <viewAttribute id="Hire_Type"/>
+      <viewAttribute id="Office_Location"/>
+      <viewAttribute id="Pension_Plan"/>
+      <viewAttribute id="Benefits_Enrolled"/>
+      <viewAttribute id="Willing_to_Relocate"/>
+      <viewAttribute id="Relocate_Pecentage"/>
+      <viewAttribute id="Contact_by_Recruiter"/>
+      <viewAttribute id="Sick_Days" aggregationType="sum"/>
+      <viewAttribute id="Vacation_Days" aggregationType="sum"/>
+      <viewAttribute id="Career_Development"/>
+      <viewAttribute id="Visa_Required"/>
+      <viewAttribute id="Emergency_Contact_Filled"/>
+      <viewAttribute id="Emergency_Contact_Relationship"/>
+      <viewAttribute id="Refered_an_Employee"/>
+      <viewAttribute id="Bonus_Category"/>
+      <viewAttribute id="Spoken_Languages"/>
+      <viewAttribute id="HR_Document_Available"/>
+      <viewAttribute id="Resume_Available"/>
+      <viewAttribute id="Visa_Sponsorship"/>
+      <viewAttribute id="Cover_Letter_Available"/>
+      <viewAttribute id="Madatory_Training"/>
+      <viewAttribute id="Mentor_Program"/>
+      <viewAttribute id="Fellowship_Program"/>
+      <viewAttribute id="Alumni_Network"/>
+      <viewAttribute id="Monthly_Contribution" aggregationType="sum"/>
+      <viewAttribute id="Requested_Feedback"/>
+      <viewAttribute id="Curated_Learning_Paths"/>
+      <viewAttribute id="Appreciate_Program"/>
+      <viewAttribute id="Goals_Set"/>
+      <viewAttribute id="Security_Incident"/>
+      <viewAttribute id="HR_Flag"/>
+      <viewAttribute id="Software_Degree"/>
+      <viewAttribute id="Time_Since_Promotion"/>
+      <viewAttribute id="Performance_Level"/>
+      <viewAttribute id="Environment_Satisfaction"/>
+      <viewAttribute id="Job_Satisfaction"/>
+      <viewAttribute id="Relationship_Satisfaction"/>
+      <viewAttribute id="Work_Life_Balance"/>
+      <viewAttribute id="Business_Travel"/>
+      <viewAttribute id="Distance_from_office" aggregationType="sum"/>
+      <viewAttribute id="Years_in_Current_Role"/>
+      <viewAttribute id="Years_with_Current_Manager"/>
+      <viewAttribute id="Work_Related_Accident"/>
+      <viewAttribute id="Learn_About_Career_Opportunities"/>
+      <viewAttribute id="TCS_DIM_PH_1"/>
+      <viewAttribute id="TCS_DIM_PH_2"/>
+      <viewAttribute id="TCS_DIM_PH_3"/>
+      <viewAttribute id="TCS_DIM_PH_4"/>
+      <viewAttribute id="TCS_DIM_PH_5"/>
+      <viewAttribute id="TCS_DIM_PH_6"/>
+      <viewAttribute id="TCS_DIM_PH_7"/>
+      <viewAttribute id="TCS_DIM_PH_8"/>
+      <viewAttribute id="TCS_DIM_PH_9"/>
+      <viewAttribute id="TCS_DIM_PH_10"/>
+      <viewAttribute id="TCS_DIM_PH_11"/>
+      <viewAttribute id="TCS_DIM_PH_12"/>
+      <viewAttribute id="TCS_DIM_PH_13"/>
+      <viewAttribute id="TCS_DIM_PH_14"/>
+      <viewAttribute id="TCS_DIM_PH_15"/>
+      <viewAttribute id="TCS_DIM_PH_16"/>
+      <viewAttribute id="TCS_DIM_PH_17"/>
+      <viewAttribute id="TCS_DIM_PH_18"/>
+      <viewAttribute id="TCS_DIM_PH_19"/>
+      <viewAttribute id="TCS_DIM_PH_20"/>
+      <viewAttribute id="TCS_DIM_PH_21"/>
+      <viewAttribute id="TCS_DIM_PH_22"/>
+      <viewAttribute id="TCS_DIM_PH_23"/>
+      <viewAttribute id="TCS_DIM_PH_24"/>
+      <viewAttribute id="TCS_DIM_PH_25"/>
+      <viewAttribute id="TCS_DIM_PH_26"/>
+      <viewAttribute id="TCS_DIM_PH_27"/>
+      <viewAttribute id="TCS_DIM_PH_28"/>
+      <viewAttribute id="TCS_DIM_PH_29"/>
+      <viewAttribute id="TCS_DIM_PH_30"/>
+      <viewAttribute id="TCS_DIM_PH_31"/>
+      <viewAttribute id="TCS_DIM_PH_32"/>
+      <viewAttribute id="TCS_DIM_PH_33"/>
+      <viewAttribute id="Employee_Structure"/>
+      <viewAttribute id="Employee_Hierarchy"/>
+      <viewAttribute id="Hire_Date"/>
+      <viewAttribute id="Start_Date"/>
+      <viewAttribute id="Termination_Date"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="com.sap::TCS_TECHNOLOGIES_HR_DATA">
+      <mapping xsi:type="Calculation:AttributeMapping" target="Employee_ID" source="Employee ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Time_with_Company_(Days)" source="Time with Company (Days)"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Employment_Status" source="Employment Status"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Career_Level" source="Career Level"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Employment_Type" source="Employment Type"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Managerial_Employee" source="Managerial Employee"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Veteran_Status_(US)" source="Veteran Status (US)"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Marital_Status" source="Marital Status"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Minority_Grouping_(US)" source="Minority Grouping (US)"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cost_Center" source="Cost Center"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Corporate_Structure" source="Corporate Structure"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Job_Family" source="Job Family"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Hire_Type" source="Hire Type"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Office_Location" source="Office Location"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Pension_Plan" source="Pension Plan"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Benefits_Enrolled" source="Benefits Enrolled"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Willing_to_Relocate" source="Willing to Relocate"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Relocate_Pecentage" source="Relocate Pecentage"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Contact_by_Recruiter" source="Contact by Recruiter"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Sick_Days" source="Sick Days"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Vacation_Days" source="Vacation Days"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Career_Development" source="Career Development"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Visa_Required" source="Visa Required"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Emergency_Contact_Filled" source="Emergency Contact Filled"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Emergency_Contact_Relationship" source="Emergency Contact Relationship"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Refered_an_Employee" source="Refered an Employee"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Bonus_Category" source="Bonus Category"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Spoken_Languages" source="Spoken Languages"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HR_Document_Available" source="HR Document Available"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Resume_Available" source="Resume Available"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Visa_Sponsorship" source="Visa Sponsorship"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Cover_Letter_Available" source="Cover Letter Available"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Madatory_Training" source="Madatory Training"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Mentor_Program" source="Mentor Program"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Fellowship_Program" source="Fellowship Program"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Alumni_Network" source="Alumni Network"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Monthly_Contribution" source="Monthly Contribution"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Requested_Feedback" source="Requested Feedback"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Curated_Learning_Paths" source="Curated Learning Paths"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Appreciate_Program" source="Appreciate Program"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Goals_Set" source="Goals Set"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Security_Incident" source="Security Incident"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HR_Flag" source="HR Flag"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Software_Degree" source="Software Degree"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Time_Since_Promotion" source="Time Since Promotion"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Performance_Level" source="Performance Level"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Environment_Satisfaction" source="Environment Satisfaction"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Job_Satisfaction" source="Job Satisfaction"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Relationship_Satisfaction" source="Relationship Satisfaction"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Work_Life_Balance" source="Work Life Balance"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Business_Travel" source="Business Travel"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Distance_from_office" source="Distance from office"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Years_in_Current_Role" source="Years in Current Role"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Years_with_Current_Manager" source="Years with Current Manager"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Work_Related_Accident" source="Work Related Accident"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Learn_About_Career_Opportunities" source="Learn About Career Opportunities"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Employee_Structure" source="Employee Structure"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Employee_Hierarchy" source="Employee Hierarchy"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="Hire_Date" source="Hire Date"/>
+    </input>
+  </calculationView>
+</calculationViews>
+
+<logicalModel id="agg_TCS_HR_FACT">
+  <attributes>
+    <attribute id="Employee_ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Employee_ID"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Employee_ID"/>
+    </attribute>
+    <attribute id="Age" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Age"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Age"/>
+    </attribute>
+    <attribute id="Employment_Status" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Employment_Status"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Employment_Status"/>
+    </attribute>
+    <attribute id="Gender" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Gender"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Gender"/>
+    </attribute>
+    <attribute id="Career_Level" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Career_Level"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Career_Level"/>
+    </attribute>
+    <attribute id="Employment_Type" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Employment_Type"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Employment_Type"/>
+    </attribute>
+    <attribute id="Managerial_Employee" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Managerial_Employee"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Managerial_Employee"/>
+    </attribute>
+    <attribute id="Country" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Country"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Country"/>
+    </attribute>
+    <attribute id="Veteran_Status_(US)" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Veteran_Status_(US)"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Veteran_Status_(US)"/>
+    </attribute>
+    <attribute id="Marital_Status" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Marital_Status"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Marital_Status"/>
+    </attribute>
+    <attribute id="Minority_Grouping_(US)" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Minority_Grouping_(US)"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Minority_Grouping_(US)"/>
+    </attribute>
+    <attribute id="Cost_Center" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Cost_Center"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Cost_Center"/>
+    </attribute>
+    <attribute id="Degree" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Degree"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Degree"/>
+    </attribute>
+    <attribute id="Instituion" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Instituion"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Instituion"/>
+    </attribute>
+    <attribute id="Corporate_Structure" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Corporate_Structure"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Corporate_Structure"/>
+    </attribute>
+    <attribute id="Job_Family" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Job_Family"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Job_Family"/>
+    </attribute>
+    <attribute id="Hire_Type" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Hire_Type"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Hire_Type"/>
+    </attribute>
+    <attribute id="Office_Location" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Office_Location"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Office_Location"/>
+    </attribute>
+    <attribute id="Pension_Plan" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Pension_Plan"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Pension_Plan"/>
+    </attribute>
+    <attribute id="Benefits_Enrolled" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Benefits_Enrolled"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Benefits_Enrolled"/>
+    </attribute>
+    <attribute id="Willing_to_Relocate" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Willing_to_Relocate"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Willing_to_Relocate"/>
+    </attribute>
+    <attribute id="Relocate_Pecentage" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Relocate_Pecentage"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Relocate_Pecentage"/>
+    </attribute>
+    <attribute id="Contact_by_Recruiter" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Contact_by_Recruiter"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Contact_by_Recruiter"/>
+    </attribute>
+    <attribute id="Career_Development" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Career_Development"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Career_Development"/>
+    </attribute>
+    <attribute id="Visa_Required" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Visa_Required"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Visa_Required"/>
+    </attribute>
+    <attribute id="Emergency_Contact_Filled" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Emergency_Contact_Filled"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Emergency_Contact_Filled"/>
+    </attribute>
+    <attribute id="Emergency_Contact_Relationship" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Emergency_Contact_Relationship"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Emergency_Contact_Relationship"/>
+    </attribute>
+    <attribute id="Refered_an_Employee" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Refered_an_Employee"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Refered_an_Employee"/>
+    </attribute>
+    <attribute id="HR_Document_Available" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HR_Document_Available"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="HR_Document_Available"/>
+    </attribute>
+    <attribute id="Resume_Available" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Resume_Available"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Resume_Available"/>
+    </attribute>
+    <attribute id="Visa_Sponsorship" order="39" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Visa_Sponsorship"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Visa_Sponsorship"/>
+    </attribute>
+    <attribute id="Cover_Letter_Available" order="40" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Cover_Letter_Available"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Cover_Letter_Available"/>
+    </attribute>
+    <attribute id="Madatory_Training" order="41" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Madatory_Training"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Madatory_Training"/>
+    </attribute>
+    <attribute id="Mentor_Program" order="42" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Mentor_Program"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Mentor_Program"/>
+    </attribute>
+    <attribute id="Fellowship_Program" order="43" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Fellowship_Program"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Fellowship_Program"/>
+    </attribute>
+    <attribute id="Alumni_Network" order="44" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Alumni_Network"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Alumni_Network"/>
+    </attribute>
+    <attribute id="Requested_Feedback" order="46" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Requested_Feedback"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Requested_Feedback"/>
+    </attribute>
+    <attribute id="Curated_Learning_Paths" order="47" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Curated_Learning_Paths"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Curated_Learning_Paths"/>
+    </attribute>
+    <attribute id="Appreciate_Program" order="48" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Appreciate_Program"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Appreciate_Program"/>
+    </attribute>
+    <attribute id="Goals_Set" order="49" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Goals_Set"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Goals_Set"/>
+    </attribute>
+    <attribute id="Security_Incident" order="50" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Security_Incident"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Security_Incident"/>
+    </attribute>
+    <attribute id="HR_Flag" order="51" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HR_Flag"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="HR_Flag"/>
+    </attribute>
+    <attribute id="Software_Degree" order="52" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Software_Degree"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Software_Degree"/>
+    </attribute>
+    <attribute id="Time_Since_Promotion" order="53" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Time_Since_Promotion"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Time_Since_Promotion"/>
+    </attribute>
+    <attribute id="Performance_Level" order="54" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Performance_Level"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Performance_Level"/>
+    </attribute>
+    <attribute id="Environment_Satisfaction" order="55" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Environment_Satisfaction"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Environment_Satisfaction"/>
+    </attribute>
+    <attribute id="Job_Satisfaction" order="56" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Job_Satisfaction"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Job_Satisfaction"/>
+    </attribute>
+    <attribute id="Relationship_Satisfaction" order="57" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Relationship_Satisfaction"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Relationship_Satisfaction"/>
+    </attribute>
+    <attribute id="Work_Life_Balance" order="58" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Work_Life_Balance"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Work_Life_Balance"/>
+    </attribute>
+    <attribute id="Business_Travel" order="59" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Business_Travel"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Business_Travel"/>
+    </attribute>
+    <attribute id="Years_in_Current_Role" order="61" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Years_in_Current_Role"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Years_in_Current_Role"/>
+    </attribute>
+    <attribute id="Years_with_Current_Manager" order="62" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Years_with_Current_Manager"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Years_with_Current_Manager"/>
+    </attribute>
+    <attribute id="Work_Related_Accident" order="63" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Work_Related_Accident"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Work_Related_Accident"/>
+    </attribute>
+    <attribute id="Learn_About_Career_Opportunities" order="64" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Learn_About_Career_Opportunities"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Learn_About_Career_Opportunities"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_1" order="65" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_1"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_1"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_2" order="66" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_2"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_2"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_3" order="67" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_3"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_3"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_4" order="68" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_4"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_4"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_5" order="69" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_5"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_5"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_6" order="70" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_6"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_6"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_7" order="71" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_7"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_7"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_8" order="72" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_8"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_8"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_9" order="73" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_9"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_9"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_10" order="74" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_10"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_10"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_11" order="75" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_11"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_11"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_12" order="76" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_12"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_12"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_13" order="77" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_13"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_13"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_14" order="78" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_14"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_14"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_15" order="79" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_15"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_15"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_16" order="80" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_16"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_16"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_17" order="81" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_17"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_17"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_18" order="82" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_18"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_18"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_19" order="83" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_19"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_19"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_20" order="84" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_20"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_20"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_21" order="85" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_21"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_21"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_22" order="86" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_22"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_22"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_23" order="87" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_23"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_23"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_24" order="88" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_24"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_24"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_25" order="89" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_25"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_25"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_26" order="90" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_26"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_26"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_27" order="91" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_27"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_27"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_28" order="92" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_28"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_28"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_29" order="93" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_29"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_29"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_30" order="94" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_30"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_30"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_31" order="95" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_31"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_31"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_32" order="96" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_32"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_32"/>
+    </attribute>
+    <attribute id="TCS_DIM_PH_33" order="97" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TCS_DIM_PH_33"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="TCS_DIM_PH_33"/>
+    </attribute>
+    <attribute id="Employee_Structure" order="98" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Employee_Structure"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Employee_Structure"/>
+    </attribute>
+    <attribute id="Employee_Hierarchy" order="99" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Employee_Hierarchy"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Employee_Hierarchy"/>
+    </attribute>
+    <attribute id="Hire_Date" order="100" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Hire_Date"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Hire_Date"/>
+    </attribute>
+    <attribute id="Start_Date" order="101" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Start_Date"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Start_Date"/>
+    </attribute>
+    <attribute id="Termination_Date" order="102" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Termination_Date"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Termination_Date"/>
+    </attribute>
+    <attribute id="Age$local">
+      <descriptions defaultDescription="Age"/>
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Age"/>
+    </attribute>
+    <attribute id="Career_Level$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Career_Level"/>
+    </attribute>
+    <attribute id="Employment_Status$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Employment_Status"/>
+    </attribute>
+    <attribute id="Managerial_Employee$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Managerial_Employee"/>
+    </attribute>
+    <attribute id="Office_Location$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Office_Location"/>
+    </attribute>
+    <attribute id="Corporate_Structure$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Corporate_Structure"/>
+    </attribute>
+    <attribute id="Cost_Center$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Cost_Center"/>
+    </attribute>
+    <attribute id="Degree$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Degree"/>
+    </attribute>
+    <attribute id="Employee_ID$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Employee_ID"/>
+    </attribute>
+    <attribute id="Employment_Type$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Employment_Type"/>
+    </attribute>
+    <attribute id="Employee_Structure$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Employee_Structure"/>
+    </attribute>
+    <attribute id="Gender$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Gender"/>
+    </attribute>
+    <attribute id="Country$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Country"/>
+    </attribute>
+    <attribute id="Hire_Type$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Hire_Type"/>
+    </attribute>
+    <attribute id="Instituion$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Instituion"/>
+    </attribute>
+    <attribute id="Job_Family$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Job_Family"/>
+    </attribute>
+    <attribute id="Employee_Hierarchy$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Employee_Hierarchy"/>
+    </attribute>
+    <attribute id="Marital_Status$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Marital_Status"/>
+    </attribute>
+    <attribute id="Minority_Grouping_(US)$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Minority_Grouping_(US)"/>
+    </attribute>
+    <attribute id="Veteran_Status_(US)$local">
+      <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Veteran_Status_(US)"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="Attrition" order="3" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Attrition"/>
+      <measureMapping columnObjectName="agg_TCS_HR_FACT" columnName="Attrition"/>
+    </measure>
+    <measure id="Headcount" order="4" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Headcount"/>
+      <measureMapping columnObjectName="agg_TCS_HR_FACT" columnName="Headcount"/>
+    </measure>
+    <measure id="Salary" order="5" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Salary"/>
+      <measureMapping columnObjectName="agg_TCS_HR_FACT" columnName="Salary"/>
+    </measure>
+    <measure id="Time_with_Company_(Days)" order="6" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Time_with_Company_(Days)"/>
+      <measureMapping columnObjectName="agg_TCS_HR_FACT" columnName="Time_with_Company_(Days)"/>
+    </measure>
+    <measure id="Sick_Days" order="28" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Sick_Days"/>
+      <measureMapping columnObjectName="agg_TCS_HR_FACT" columnName="Sick_Days"/>
+    </measure>
+    <measure id="Vacation_Days" order="29" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Vacation_Days"/>
+      <measureMapping columnObjectName="agg_TCS_HR_FACT" columnName="Vacation_Days"/>
+    </measure>
+    <measure id="Bonus_Category" order="35" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Bonus_Category"/>
+      <measureMapping columnObjectName="agg_TCS_HR_FACT" columnName="Bonus_Category"/>
+    </measure>
+    <measure id="Spoken_Languages" order="36" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Spoken_Languages"/>
+      <measureMapping columnObjectName="agg_TCS_HR_FACT" columnName="Spoken_Languages"/>
+    </measure>
+    <measure id="Monthly_Contribution" order="45" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Monthly_Contribution"/>
+      <measureMapping columnObjectName="agg_TCS_HR_FACT" columnName="Monthly_Contribution"/>
+    </measure>
+    <measure id="Distance_from_office" order="60" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Distance_from_office"/>
+      <measureMapping columnObjectName="agg_TCS_HR_FACT" columnName="Distance_from_office"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+  <sharedDimensions>
+    <logicalJoin associatedObjectUri="TCS_DIM_AGE">
+      <attributes>
+        <attributeRef>Age$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>Age_ID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+      <associatedHierarchyFeature hierarchyName="AgeHierarchy">
+        <joinProperties nodeElementName="AgeHierarchynode" expressionParameterName="AgeHierarchyexpr"/>
+      </associatedHierarchyFeature>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_CAREER_LEVEL">
+      <attributes>
+        <attributeRef>Career_Level$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>CareerLevelID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_EMP_STATUS">
+      <attributes>
+        <attributeRef>Employment_Status$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>EmpStatusID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_MANAGER">
+      <attributes>
+        <attributeRef>Managerial_Employee$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>MgrID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_CITY_ID">
+      <attributes>
+        <attributeRef>Office_Location$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>City_ID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures>
+        <attributeReference alias="OfficeCountry" attributeName="Country">
+          <descriptions defaultDescription="Office Country"/>
+        </attributeReference>
+        <attributeReference alias="OfficeCity" attributeName="City">
+          <descriptions defaultDescription="Office City"/>
+        </attributeReference>
+        <attributeReference alias="OfficeIso" attributeName="ISO_2">
+          <descriptions defaultDescription="Office ISO2"/>
+        </attributeReference>
+        <attributeReference alias="OfficeRegion" attributeName="Region">
+          <descriptions defaultDescription="Office Region"/>
+        </attributeReference>
+        <attributeReference alias="OfficeLat" attributeName="Latitude">
+          <descriptions defaultDescription="Office Latitude"/>
+        </attributeReference>
+        <attributeReference alias="OfficeLong" attributeName="Longitude">
+          <descriptions defaultDescription="Office Longitude"/>
+        </attributeReference>
+      </associatedAttributeFeatures>
+      <associatedHierarchyFeature hierarchyName="GeoHierarchy">
+        <joinProperties nodeElementName="GeoHierarchynode" expressionParameterName="GeoHierarchyexpr"/>
+      </associatedHierarchyFeature>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_CORP_STRUC">
+      <attributes>
+        <attributeRef>Corporate_Structure$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>CorpStrucID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" optimizeJoinColumns="false" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+      <associatedHierarchyFeature hierarchyName="CorpHierarchy">
+        <joinProperties nodeElementName="CorpHierarchynode" expressionParameterName="CorpHierarchyexpr"/>
+      </associatedHierarchyFeature>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_COST_CENTER">
+      <attributes>
+        <attributeRef>Cost_Center$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>CostCenterID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_DEGREE">
+      <attributes>
+        <attributeRef>Degree$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>DegreeID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_EMPLOYEE">
+      <attributes>
+        <attributeRef>Employee_ID$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>EmployeeID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_EMP_GROUP">
+      <attributes>
+        <attributeRef>Employment_Type$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>EmpGroupID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_EMP_STRUCTURE">
+      <attributes>
+        <attributeRef>Employee_Structure$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>EmpStrucID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures>
+        <attributeReference alias="OrgRegion" attributeName="Region">
+          <descriptions defaultDescription="Org Region"/>
+        </attributeReference>
+        <attributeReference alias="OrgCountry" attributeName="Country">
+          <descriptions defaultDescription="Org Country"/>
+        </attributeReference>
+        <attributeReference alias="OrgCity" attributeName="City">
+          <descriptions defaultDescription="Org City"/>
+        </attributeReference>
+        <attributeReference alias="OrgCareerLevel" attributeName="Career_Level">
+          <descriptions defaultDescription="Org Career Level"/>
+        </attributeReference>
+        <attributeReference alias="OrgDept" attributeName="Department">
+          <descriptions defaultDescription="Org Deparment"/>
+        </attributeReference>
+        <attributeReference attributeName="EmpStrucID" hidden="true"/>
+      </associatedAttributeFeatures>
+      <associatedHierarchyFeature hierarchyName="EmpStrucHierarchy">
+        <joinProperties nodeElementName="EmpStrucHierarchynode" expressionParameterName="EmpStrucHierarchyexpr"/>
+      </associatedHierarchyFeature>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_GENDER">
+      <attributes>
+        <attributeRef>Gender$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>GenderID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_HIRE_LOCATION">
+      <attributes>
+        <attributeRef>Country$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>HireLocID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_HIRE_TYPE">
+      <attributes>
+        <attributeRef>Hire_Type$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>HireTypeID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+      <associatedHierarchyFeature hierarchyName="HireTypeHierarchy">
+        <joinProperties nodeElementName="HireTypeHierarchynode" expressionParameterName="HireTypeHierarchyexpr"/>
+      </associatedHierarchyFeature>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_INSTITUTION">
+      <attributes>
+        <attributeRef>Instituion$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>InstitutionID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_JOB_FAMILY">
+      <attributes>
+        <attributeRef>Job_Family$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>JobFamilyID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+      <associatedHierarchyFeature hierarchyName="JobFamilyHierarchy">
+        <joinProperties nodeElementName="JobFamilyHierarchynode" expressionParameterName="JobFamilyHierarchyexpr"/>
+      </associatedHierarchyFeature>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_MANAGER_HIER">
+      <attributes>
+        <attributeRef>Employee_Hierarchy$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>EmpID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+      <associatedHierarchyFeature hierarchyName="ManagerHierarchy">
+        <joinProperties nodeElementName="ManagerHierarchynode" expressionParameterName="ManagerHierarchyexpr"/>
+      </associatedHierarchyFeature>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_MARITAL_STATUS">
+      <attributes>
+        <attributeRef>Marital_Status$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>MaritalStatusID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_MINORITY_GROUPING">
+      <attributes>
+        <attributeRef>Minority_Grouping_(US)$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>MinorityGroupingID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="TCS_DIM_VET_STATUS">
+      <attributes>
+        <attributeRef>Veteran_Status_(US)$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>VetStatusID</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="referential" referentialDirection="left" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+  </sharedDimensions>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="237"/>
+    </shape>
+    <shape expanded="true" modelObjectName="agg_TCS_HR_FACT" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="130" y="517"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="agg_TCS_HR_FACT" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
+      <upperLeftCorner x="486" y="30"/>
+      <rectangleSize width="227"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_AGE" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="949" y="44"/>
+      <rectangleSize width="166"/>
+    </shape>
+  
+    <shape modelObjectName="TCS_DIM_CAREER_LEVEL" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="1249" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_EMP_STATUS" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="1549" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_MANAGER" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="1849" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  
+    <shape modelObjectName="TCS_DIM_CITY_ID" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="2149" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_CORP_STRUC" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="16" y="726"/>
+      <rectangleSize width="206"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_COST_CENTER" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="2749" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_DEGREE" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="3049" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_EMPLOYEE" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="3349" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_EMP_GROUP" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="3649" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_EMP_STRUCTURE" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="3949" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_GENDER" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="4249" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_HIRE_LOCATION" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="4549" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_HIRE_TYPE" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="4849" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_INSTITUTION" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="5149" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_JOB_FAMILY" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="5449" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_MANAGER_HIER" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="5749" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_MARITAL_STATUS" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="6049" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_MINORITY_GROUPING" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="6349" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="TCS_DIM_VET_STATUS" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="6649" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

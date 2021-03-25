@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" id="TCS_DIM_EMP_STRUCTURE" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TCS_DIM_EMP_STRUCTURE"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::TCS_EMP_STRUCTURE">
+    <resourceUri>com.sap::TCS_EMP_STRUCTURE</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<inlineHierarchy xsi:type="Dimension:LeveledHierarchy" id="EmpStrucHierarchy" aggregateAllNodes="false" orphanedNodesHandling="ROOT_NODES" rootNodeVisibility="ADD_ROOT_NODE" withRootNode="true" nodeStyle="NAME_PATH_ENFORCED" cacheEnabled="true" cycleHandling="BREAKUP" emptyValueIsNull="true">
+  <descriptions defaultDescription="Emp Struc Hierarchy"/>
+  <unassignedMemberProperties mode="FALSE"/>
+  <levels>
+    <level levelAttribute="Organization" levelType="MDLEVEL_TYPE_REGULAR" order="1" orderAttribute="Organization" sortDirection="ASC"/>
+    <level levelAttribute="Department" levelType="MDLEVEL_TYPE_REGULAR" order="2" orderAttribute="Department" sortDirection="ASC"/>
+    <level levelAttribute="Region" levelType="MDLEVEL_TYPE_REGULAR" order="3" orderAttribute="Region" sortDirection="ASC"/>
+    <level levelAttribute="Country" levelType="MDLEVEL_TYPE_REGULAR" order="4" orderAttribute="Country" sortDirection="ASC"/>
+    <level levelAttribute="City" levelType="MDLEVEL_TYPE_REGULAR" order="5" orderAttribute="City" sortDirection="ASC"/>
+    <level levelAttribute="EmpStrucDescription" levelType="MDLEVEL_TYPE_REGULAR" order="6" orderAttribute="EmpStrucDescription" sortDirection="ASC"/>
+  </levels>
+</inlineHierarchy>
+
+<logicalModel id="com.sap::TCS_EMP_STRUCTURE">
+  <attributes>
+    <attribute id="EmpStrucID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Emp Struc ID"/>
+      <keyMapping columnObjectName="TCS_EMP_STRUCTURE" columnName="ID"/>
+    </attribute>
+    <attribute id="EmpStrucDescription" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Emp Struc Description"/>
+      <keyMapping columnObjectName="TCS_EMP_STRUCTURE" columnName="Description"/>
+    </attribute>
+    <attribute id="Organization" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Organization"/>
+      <keyMapping columnObjectName="TCS_EMP_STRUCTURE" columnName="Organization"/>
+    </attribute>
+    <attribute id="Department" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Department"/>
+      <keyMapping columnObjectName="TCS_EMP_STRUCTURE" columnName="Department"/>
+    </attribute>
+    <attribute id="Region" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Region"/>
+      <keyMapping columnObjectName="TCS_EMP_STRUCTURE" columnName="Region"/>
+    </attribute>
+    <attribute id="Country" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Country"/>
+      <keyMapping columnObjectName="TCS_EMP_STRUCTURE" columnName="Country"/>
+    </attribute>
+    <attribute id="City" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="City"/>
+      <keyMapping columnObjectName="TCS_EMP_STRUCTURE" columnName="City"/>
+    </attribute>
+    <attribute id="Career_Level" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Career_Level"/>
+      <keyMapping columnObjectName="TCS_EMP_STRUCTURE" columnName="Career_Level"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

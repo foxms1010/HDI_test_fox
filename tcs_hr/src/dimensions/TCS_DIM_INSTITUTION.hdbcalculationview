@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="TCS_DIM_INSTITUTION" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TCS_DIM_INSTITUTION"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::TCS_INSTITUTION">
+    <resourceUri>com.sap::TCS_INSTITUTION</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+
+<logicalModel id="com.sap::TCS_INSTITUTION">
+  <attributes>
+    <attribute id="InstitutionID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Institution ID"/>
+      <keyMapping columnObjectName="TCS_INSTITUTION" columnName="ID"/>
+    </attribute>
+    <attribute id="InstitutionDescription" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Institution Description"/>
+      <keyMapping columnObjectName="TCS_INSTITUTION" columnName="Description"/>
+    </attribute>
+    <attribute id="InstitutionSize" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Institution Size"/>
+      <keyMapping columnObjectName="TCS_INSTITUTION" columnName="Size"/>
+    </attribute>
+    <attribute id="Subject_Range" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Subject_Range"/>
+      <keyMapping columnObjectName="TCS_INSTITUTION" columnName="Subject Range"/>
+    </attribute>
+    <attribute id="Research_Intensity" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Research_Intensity"/>
+      <keyMapping columnObjectName="TCS_INSTITUTION" columnName="Research Intensity"/>
+    </attribute>
+    <attribute id="InstitutionAge" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Institution Age"/>
+      <keyMapping columnObjectName="TCS_INSTITUTION" columnName="Age"/>
+    </attribute>
+    <attribute id="InstitutionStatus" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Institution Status"/>
+      <keyMapping columnObjectName="TCS_INSTITUTION" columnName="Status"/>
+    </attribute>
+    <attribute id="Academic_Reputation" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Academic_Reputation"/>
+      <keyMapping columnObjectName="TCS_INSTITUTION" columnName="Academic Reputation"/>
+    </attribute>
+    <attribute id="Employer_Reputation" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Employer_Reputation"/>
+      <keyMapping columnObjectName="TCS_INSTITUTION" columnName="Employer_Reputation"/>
+    </attribute>
+    <attribute id="International_Students" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="International_Students"/>
+      <keyMapping columnObjectName="TCS_INSTITUTION" columnName="International Students"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" id="TCS_DIM_JOB_FAMILY" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TCS_DIM_JOB_FAMILY"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::TCS_JOB_FAMILY">
+    <resourceUri>com.sap::TCS_JOB_FAMILY</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<inlineHierarchy xsi:type="Dimension:LeveledHierarchy" id="JobFamilyHierarchy" aggregateAllNodes="false" orphanedNodesHandling="ROOT_NODES" rootNodeVisibility="ADD_ROOT_NODE" withRootNode="true" nodeStyle="NAME_PATH_ENFORCED" cacheEnabled="true" cycleHandling="BREAKUP" emptyValueIsNull="true">
+  <descriptions defaultDescription="Job Family Hierarchy"/>
+  <unassignedMemberProperties mode="FALSE"/>
+  <levels>
+    <level levelAttribute="JobFamilyLevel_1" levelType="MDLEVEL_TYPE_REGULAR" order="1" orderAttribute="JobFamilyLevel_1" sortDirection="ASC"/>
+    <level levelAttribute="JobFamilyDescription" levelType="MDLEVEL_TYPE_REGULAR" order="2" orderAttribute="JobFamilyDescription" sortDirection="ASC"/>
+  </levels>
+</inlineHierarchy>
+
+<logicalModel id="com.sap::TCS_JOB_FAMILY">
+  <attributes>
+    <attribute id="JobFamilyID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Job Family ID"/>
+      <keyMapping columnObjectName="TCS_JOB_FAMILY" columnName="ID"/>
+    </attribute>
+    <attribute id="JobFamilyDescription" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Job Family Description"/>
+      <keyMapping columnObjectName="TCS_JOB_FAMILY" columnName="Description"/>
+    </attribute>
+    <attribute id="JobFamilyLevel_1" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Job Family Level_1"/>
+      <keyMapping columnObjectName="TCS_JOB_FAMILY" columnName="Level 1"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

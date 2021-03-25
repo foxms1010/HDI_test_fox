@@ -1,0 +1,134 @@
+{
+  "com.sap::TCS_AGE": {
+    "target": {
+      "object": "TCS_AGE",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_MANAGER": {
+    "target": {
+      "object": "TCS_MANAGER",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_CAREER_LEVEL": {
+    "target": {
+      "object": "TCS_CAREER_LEVEL",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_EMP_STATUS": {
+    "target": {
+      "object": "TCS_EMP_STATUS",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_VET_STATUS": {
+    "target": {
+      "object": "TCS_VET_STATUS",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_MINORITY_GROUPING": {
+    "target": {
+      "object": "TCS_MINORITY_GROUPING",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_DEGREE": {
+    "target": {
+      "object": "TCS_DEGREE",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_CORP_STRUC": {
+    "target": {
+      "object": "TCS_CORP_STRUC",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_HIRE_TYPE": {
+    "target": {
+      "object": "TCS_HIRE_TYPE",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_EMP_STRUCTURE": {
+    "target": {
+      "object": "TCS_EMP_STRUCTURE",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_EMPLOYEE": {
+    "target": {
+      "object": "TCS_EMPLOYEE",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_GENDER": {
+    "target": {
+      "object": "TCS_GENDER",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_EMP_GROUP": {
+    "target": {
+      "object": "TCS_EMP_GROUP",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_MARITAL_STATUS": {
+    "target": {
+      "object": "TCS_MARITAL_STATUS",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_COST_CENTER": {
+    "target": {
+      "object": "TCS_COST_CENTER",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_INSTITUTION": {
+    "target": {
+      "object": "TCS_INSTITUTION",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_JOB_FAMILY": {
+    "target": {
+      "object": "TCS_JOB_FAMILY",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_MANAGER_HIERARCHY": {
+    "target": {
+      "object": "TCS_MANAGER_HIERARCHY",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_CITY": {
+    "target": {
+      "object": "TCS_CITY",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_HIRE_LOCATION": {
+    "target": {
+      "object": "TCS_HIRE_LOCATION",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_SKILL": {
+    "target": {
+      "object": "TCS_SKILL",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  },
+  "com.sap::TCS_SKILL_TYPE": {
+    "target": {
+      "object": "TCS_SKILL_TYPE",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" id="TCS_DIM_AGE" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TCS_DIM_AGE"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::TCS_AGE">
+    <resourceUri>com.sap::TCS_AGE</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<inlineHierarchy xsi:type="Dimension:LeveledHierarchy" id="AgeHierarchy" aggregateAllNodes="false" orphanedNodesHandling="ROOT_NODES" rootNodeVisibility="ADD_ROOT_NODE" withRootNode="true" nodeStyle="NAME_PATH_ENFORCED" cacheEnabled="true" cycleHandling="BREAKUP" emptyValueIsNull="true">
+  <descriptions defaultDescription="Age Hierarchy"/>
+  <unassignedMemberProperties mode="FALSE"/>
+  <levels>
+    <level levelAttribute="Age_Level_1" levelType="MDLEVEL_TYPE_REGULAR" order="1" orderAttribute="Age_Level_1" sortDirection="ASC"/>
+    <level levelAttribute="Age_Level_2" levelType="MDLEVEL_TYPE_REGULAR" order="2" orderAttribute="Age_Level_2" sortDirection="ASC"/>
+    <level levelAttribute="Age_ID" levelType="MDLEVEL_TYPE_REGULAR" order="3" orderAttribute="Age_ID" sortDirection="ASC"/>
+  </levels>
+</inlineHierarchy>
+
+<logicalModel id="com.sap::TCS_AGE">
+  <attributes>
+    <attribute id="Age_ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Age ID"/>
+      <keyMapping columnObjectName="TCS_AGE" columnName="ID"/>
+    </attribute>
+    <attribute id="Age_Description" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Age Description"/>
+      <keyMapping columnObjectName="TCS_AGE" columnName="Description"/>
+    </attribute>
+    <attribute id="Age_Level_1" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Age Level_1"/>
+      <keyMapping columnObjectName="TCS_AGE" columnName="Level 1"/>
+    </attribute>
+    <attribute id="Age_Level_2" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Age Level_2"/>
+      <keyMapping columnObjectName="TCS_AGE" columnName="Level 2"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

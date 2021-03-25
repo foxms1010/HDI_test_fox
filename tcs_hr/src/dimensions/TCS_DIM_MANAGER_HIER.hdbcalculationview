@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" id="TCS_DIM_MANAGER_HIER" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TCS_DIM_MANAGER_HIER"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::TCS_MANAGER_HIERARCHY">
+    <resourceUri>com.sap::TCS_MANAGER_HIERARCHY</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<inlineHierarchy xsi:type="Dimension:ParentChildHierarchy" id="ManagerHierarchy" aggregateAllNodes="false" orphanedNodesHandling="ROOT_NODES" rootNodeVisibility="ADD_ROOT_NODE_IF_DEFINED" cacheEnabled="true" cycleHandling="BREAKUP" emptyValueIsNull="false">
+  <descriptions defaultDescription="Manager Hierarchy"/>
+  <unassignedMemberProperties mode="FALSE"/>
+  <attributeParentPair attribute="EmpID" parentAttribute="EmpManagerID"/>
+  <edgeAttribute attribute="EmpDescription"/>
+</inlineHierarchy>
+
+<logicalModel id="com.sap::TCS_MANAGER_HIERARCHY">
+  <attributes>
+    <attribute id="EmpID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Emp ID"/>
+      <keyMapping columnObjectName="TCS_MANAGER_HIERARCHY" columnName="ID"/>
+    </attribute>
+    <attribute id="EmpDescription" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Emp Description"/>
+      <keyMapping columnObjectName="TCS_MANAGER_HIERARCHY" columnName="Description"/>
+    </attribute>
+    <attribute id="EmpManagerID" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Employee Manager ID"/>
+      <keyMapping columnObjectName="TCS_MANAGER_HIERARCHY" columnName="Manager"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

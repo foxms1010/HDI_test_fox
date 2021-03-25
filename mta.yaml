@@ -1,0 +1,31 @@
+_schema-version: "2.1"
+ID: tcs_hr
+version: 0.0.1
+modules:
+- name: tcs_hr
+  type: hdb
+  path: tcs_hr
+  requires:
+  - name: hdi_tcs_hr
+    properties:
+      TARGET_CONTAINER: ~{hdi-container-name}
+  - name: cross-container-service-1
+    group: SERVICE_REPLACEMENTS
+    properties:
+      key: ServiceName_1
+      service: ~{the-service-name}
+resources:
+- name: hdi_tcs_hr
+  type: com.sap.xs.hdi-container
+  parameters:
+    config:
+      database_id: 81195a86-54f7-40c0-bd37-2cb558b85587
+      schema: HDI_TCS_TECHNOLOGIES_HR
+  properties:
+    hdi-container-name: ${service-name}
+- name: cross-container-service-1
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: perf_sandbox_svc
+  properties:
+    the-service-name: ${service-name}

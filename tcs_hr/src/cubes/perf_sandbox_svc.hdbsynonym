@@ -1,0 +1,8 @@
+{
+  "com.sap::TCS_TECHNOLOGIES_HR_DATA": {
+    "target": {
+      "object": "TCS_TECHNOLOGIES_HR_DATA",
+      "schema": "TCS_TECHNOLOGIES_HR"
+    }
+  }
+}

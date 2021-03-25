@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" id="TCS_DIM_HIRE_TYPE" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TCS_DIM_HIRE_TYPE"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::TCS_HIRE_TYPE">
+    <resourceUri>com.sap::TCS_HIRE_TYPE</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<inlineHierarchy xsi:type="Dimension:LeveledHierarchy" id="HireTypeHierarchy" aggregateAllNodes="false" orphanedNodesHandling="ROOT_NODES" rootNodeVisibility="ADD_ROOT_NODE" withRootNode="true" nodeStyle="NAME_PATH_ENFORCED" cacheEnabled="true" cycleHandling="BREAKUP" emptyValueIsNull="true">
+  <descriptions defaultDescription="Hire Type Hierarchy"/>
+  <unassignedMemberProperties mode="FALSE"/>
+  <levels>
+    <level levelAttribute="HireTypeLevel_1" levelType="MDLEVEL_TYPE_REGULAR" order="1" orderAttribute="HireTypeLevel_1" sortDirection="ASC"/>
+    <level levelAttribute="HireTypeDescription" levelType="MDLEVEL_TYPE_REGULAR" order="2" orderAttribute="HireTypeDescription" sortDirection="ASC"/>
+  </levels>
+</inlineHierarchy>
+
+<logicalModel id="com.sap::TCS_HIRE_TYPE">
+  <attributes>
+    <attribute id="HireTypeID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Hire Type ID"/>
+      <keyMapping columnObjectName="TCS_HIRE_TYPE" columnName="ID"/>
+    </attribute>
+    <attribute id="HireTypeDescription" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Hire Type Description"/>
+      <keyMapping columnObjectName="TCS_HIRE_TYPE" columnName="Description"/>
+    </attribute>
+    <attribute id="HireTypeLevel_1" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Hire Type Level_1"/>
+      <keyMapping columnObjectName="TCS_HIRE_TYPE" columnName="Level 1"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

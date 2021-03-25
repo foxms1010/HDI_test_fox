@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="TCS_DIM_MANAGER" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="TCS_DIM_MANAGER"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::TCS_MANAGER">
+    <resourceUri>com.sap::TCS_MANAGER</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+
+<logicalModel id="com.sap::TCS_MANAGER">
+  <attributes>
+    <attribute id="MgrID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Mgr ID"/>
+      <keyMapping columnObjectName="TCS_MANAGER" columnName="ID"/>
+    </attribute>
+    <attribute id="MgrDescription" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Mgr Description"/>
+      <keyMapping columnObjectName="TCS_MANAGER" columnName="Description"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>
