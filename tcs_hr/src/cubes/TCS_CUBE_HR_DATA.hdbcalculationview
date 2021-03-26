@@ -183,7 +183,7 @@
 <logicalModel id="agg_TCS_HR_FACT">
   <attributes>
     <attribute id="Employee_ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Employee_ID"/>
+      <descriptions defaultDescription="EmployeeID"/>
       <keyMapping columnObjectName="agg_TCS_HR_FACT" columnName="Employee_ID"/>
     </attribute>
     <attribute id="Age" order="2" displayAttribute="false" attributeHierarchyActive="false">
